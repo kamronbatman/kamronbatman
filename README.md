@@ -95,6 +95,9 @@ stack runs in production at a
 People hear "game server" and think toy. The techniques below are server techniques. I work them out
 here, where I have total architectural freedom, and bring them to company software.
 
+<details>
+<summary>Thread contention, timers, multi-threaded serialization, pathfinding, wire protocol, low-level networking, source generation</summary>
+
 - **Thread contention.** A single-threaded game loop with a custom `SynchronizationContext`, so
   `async`/`await` works with zero locks, zero concurrent collections, and no data races possible in
   game code.
@@ -112,12 +115,17 @@ here, where I have total architectural freedom, and bring them to company softwa
 - **Source generation.** [SerializationGenerator](https://github.com/modernuo/SerializationGenerator),
   a Roslyn generator emitting versioned serialization across ~4,200 types.
 
+</details>
+
 I also contribute to [ClassicUO](https://github.com/ClassicUO/ClassicUO), the client side of the
 same wire protocol, so I've implemented both ends of it.
 
 ### provenance
 
 Before I worked on identity, I worked on authenticity. Same question, different bytes.
+
+<details>
+<summary>In 2008 I built the first Pokémon legality checker. The community that grew out of it is still going, and the problem turned out to be the one I work on now.</summary>
 
 Telling a real Pokémon from a forged one was a hard and genuinely fun problem: decide, from bytes
 alone, whether a legitimate process produced this record. That's the question device attestation and
@@ -159,10 +167,8 @@ in June 2008: *"At least now everyone can get a legit shiny US event pokemon for
 preservationist, a completionist, and I don't believe money should be a barrier to something you
 love.
 
-<details>
-<summary>If you want it: how you prove a save-file record is genuine when nothing about it is documented</summary>
-
-Two independent fingerprints, and a forgery has to survive both.
+**How you prove a save-file record is genuine when nothing about it is documented.** Two independent
+fingerprints, and a forgery has to survive both.
 
 **The PRNG.** A legitimate Pokémon's traits aren't independent of each other. Nature, gender,
 ability, shininess, and its six hidden stats all fall out of a single seed. Edit any one of them and

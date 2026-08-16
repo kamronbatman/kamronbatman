@@ -17,7 +17,7 @@ foundations other people build on top of, and both punish you for guessing.
 | Built and maintain the public ID-JAG reference implementation | [oktadev/id-assertion-authz-node-example](https://github.com/oktadev/id-assertion-authz-node-example) |
 | Have maintained, optimized and upgraded a .NET server runtime since 2018 — **over 1,800 commits** | [contributors, 2018 on](https://github.com/modernuo/ModernUO/graphs/contributors?from=2018-01-01&to=2026-12-31&type=c) |
 | Replaced a lock-based timer with an O(1) wheel: **474× less CPU** to cancel 50k timers, **zero allocations** | [benchmarks](https://github.com/modernuo/ModernUO-Benchmarks) |
-| Saving the same 10M-entity, 1.7 GB world: **RunUO stalls for 60+ seconds. ModernUO does it in ~78 ms.** | [two threads](https://github.com/runuo/runuo/blob/master/Server/Persistence/DualSaveStrategy.cs) vs [chunked fan-out](https://github.com/modernuo/ModernUO/pull/2525) |
+| Optimized 10M-entity, 1.7 GB game world persistence: **RunUO stalls for 60+ seconds. ModernUO does it in ~78 ms.** | [two threads](https://github.com/runuo/runuo/blob/master/Server/Persistence/DualSaveStrategy.cs) vs [chunked fan-out](https://github.com/modernuo/ModernUO/pull/2525) |
 | Wrote the first Pokémon legality checker in 2008, proving a save record was genuine from PRNG correlations and undocumented trash bytes | [projectpokemon/Pokemon-Legality-Checker](https://github.com/projectpokemon/Pokemon-Legality-Checker) |
 | Have been shipping Ultima Online servers since **1998** | [the 1998 shard, preserved](https://github.com/kamronbatman/GM-Casiopia-Sphere-51a) |
 
